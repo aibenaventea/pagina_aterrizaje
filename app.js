@@ -8,14 +8,14 @@ const server = http.createServer((request, response) => {
             response.end();
         });
     }
-    else if (request.url === "/ninjas.html") {
+    else if (request.url === "/ninjas") {
         fs.readFile('ninjas.html', 'utf8', (errors, contents) => {
             response.writeHead(200, {'Content-type': 'text/html'});
             response.write(contents); 
             response.end();
         });
     }
-    else if (request.url === "/dojos/dojos.html") {
+    else if (request.url === "/dojos/nueva") {
         fs.readFile('./dojos/dojos.html', 'utf8', (errors, contents) => {
             response.writeHead(200, {'Content-type': 'text/html'});
             response.write(contents); 
